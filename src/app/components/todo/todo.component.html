@@ -1,0 +1,28 @@
+<div class="container">
+    <input class="input-box" type="text" #newTodo/>
+    <button class="add-btn" (click)="addTodo(newTodo)">Submit</button>
+</div>
+
+<h1>Not Being Cliked as Completed !</h1>
+<div  *ngFor="let todo of todos" class="todo-list">
+    <ul *ngIf="!todo.complete">
+        <li 
+        [ngStyle] = "{ color: todo.complete ? 'green' : 'red' }"
+        (click)="completedTodo(todo)"
+        >
+            <h3>{{ todo.title }}</h3>
+        </li>
+    </ul>
+</div>
+
+<h1>Completed !</h1>
+<div  *ngFor="let todo of todos" class="todo-list">
+    <ul *ngIf="todo.complete">
+        <li 
+        [ngStyle] = "{ color: todo.complete ? 'green' : 'red' }"
+        (click)="completedTodo(todo)"
+        >
+            <h3>{{ todo.title }}</h3>
+        </li>
+    </ul>
+</div>
