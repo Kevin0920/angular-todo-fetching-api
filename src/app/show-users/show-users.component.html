@@ -14,3 +14,21 @@
         </tr>
     </table>
 </div>
+<br>
+<h1>Get a Post by UserId: (https://jsonplaceholder.typicode.com/posts)</h1>
+<div class="users-container">
+    <table>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+        <tr *ngFor="let post of listPosts">
+            <td>{{ post.userId }}</td>
+            <td>{{ post.id }}</td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.body }}</td>
+        </tr>
+    </table>
+</div>

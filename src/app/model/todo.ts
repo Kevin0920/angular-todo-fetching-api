@@ -1,4 +1,4 @@
-export interface Todo {
+export class Todo {
     title: string;
     complete: boolean;
 }
