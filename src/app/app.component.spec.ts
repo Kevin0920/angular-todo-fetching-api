@@ -2,6 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let component = AppComponent;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -28,4 +29,14 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('to-do-app app is running!');
   });
+
+  describe('ngOnInit', () => {
+    beforeEach(() => {
+      
+    })
+    it('should call get all posts', async () => {
+      // component.ngOnInit();
+    })
+  })
 });
+

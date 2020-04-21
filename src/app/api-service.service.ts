@@ -9,8 +9,8 @@ export class ApiServiceService {
 
   constructor(private _http: HttpClient) { }
 
-  getAllUsers(): Observable<any> {
-    return this._http.get('https://jsonplaceholder.typicode.com/users');
+  getAllPosts(): Observable<any> {
+    return this._http.get('https://jsonplaceholder.typicode.com/posts');
   }
 
   getPostByUserId(): Observable<any> {
