@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { title } from 'process';
 import { Todo } from '../../model/todo';
 
 @Component({
@@ -8,39 +9,23 @@ import { Todo } from '../../model/todo';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
+  newValue: string;
 
   constructor() { 
-    let todo1: Todo = {
-      title: "Hello World !",
-      complete: false
-    };
-    let todo2: Todo = {
-      title: "Hey it is rainning day !",
-      complete: false
-    };
-    let todo3: Todo = {
-      title: "Let's go somewhere !",
-      complete: false
-    };
-
-    this.todos.push(todo1);
-    this.todos.push(todo2);
-    this.todos.push(todo3);
     
   }
 
   ngOnInit() {
   }
 
-  addTodo(newTodo) {
-    if (newTodo.value !== "") {
-      let text: Todo = {title: newTodo.value, complete: false};
-      this.todos.push(text);
-      newTodo.value = "";
+  addTodo() {
+    if (this.todos.length === 0) {
+      this.todos = [...this.todos, {title: this.newValue, complete: false}];
+      this.newValue = '';
+    } else {
+      
     }
-    else {
-      alert("No Empty Value !")
-    }
+   return this.todos;
   }
 
   completedTodo(todo) {

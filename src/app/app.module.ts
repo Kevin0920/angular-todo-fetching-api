@@ -6,6 +6,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiServiceService } from './api-service.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ApiServiceService } from './api-service.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]

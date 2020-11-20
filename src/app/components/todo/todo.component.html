@@ -1,6 +1,7 @@
 <div class="container">
-    <input class="input-box" type="text" #newTodo/>
-    <button class="add-btn" (click)="addTodo(newTodo)">Submit</button>
+    <input class="input-box" type="text" 
+    [(ngModel)]="newValue"/>
+    <button class="add-btn" (click)="addTodo()">Submit</button>
 </div>
 
 <h1>Not Being Cliked as Completed !</h1>
